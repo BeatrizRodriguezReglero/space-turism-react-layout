@@ -1,3 +1,4 @@
+import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const StyledMenu = styled.ul`
@@ -28,4 +29,15 @@ const StyledNumber = styled.span`
 	padding-right: 12px;
 `;
 
-export { StyledMenu, StyledNumber };
+const StyledLink = styled(NavLink)`
+	align-items: center;
+	gap: 14px;
+	display: inline-flex;
+	cursor: pointer;
+	color: white;
+	padding: 40px 0px 40px 0px;
+	&.active {
+		border-bottom: 3px solid white;
+	}
+`;
+export { StyledMenu, StyledNumber, StyledLink };

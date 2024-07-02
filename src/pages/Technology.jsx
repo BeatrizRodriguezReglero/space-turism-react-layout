@@ -5,7 +5,7 @@ const Technology =()=>{
     return(
         <>
             <div>
-               
+               <TechnologyContainer/>
             </div>
         
         </>

@@ -1,15 +1,20 @@
-import { Link } from "react-router-dom"
-import { StyledMenu,  StyledNumber } from "./menu.styles"
+import { useLocation } from "react-router-dom"
+import { StyledLink, StyledMenu,  StyledNumber } from "./menu.styles"
 
 const Menu =()=>{
+    const location = useLocation();
     return(
         <>
             <nav>
                 <StyledMenu>
-                    <li><Link to="/"><StyledNumber>00</StyledNumber> HOME</Link></li>
-                    <li><Link to="/destination"><StyledNumber>01</StyledNumber> DESTINATION</Link></li>
-                    <li><Link to="/crew"><StyledNumber>02</StyledNumber> CREW</Link></li>
-                    <li><Link to="/technology"><StyledNumber>03</StyledNumber>TECNOLOGY</Link></li>
+                    <li><StyledLink to="/" ><StyledNumber>00</StyledNumber> HOME</StyledLink></li>
+
+                    <li><StyledLink to="/destination" ><StyledNumber>01</StyledNumber> DESTINATION</StyledLink></li>
+
+                    <li><StyledLink to="/crew" ><StyledNumber>02</StyledNumber> CREW</StyledLink></li>
+
+                    <li><StyledLink to="/technology" ><StyledNumber>03</StyledNumber>TECNOLOGY</StyledLink></li>
+
                 </StyledMenu>
             </nav>
         </>

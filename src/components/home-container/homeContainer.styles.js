@@ -6,6 +6,7 @@ const StyledContainer = styled.div`
 	padding: 24px 24px;
 	margin-left: 165px;
 	margin-top: 251px;
+	padding-bottom: 131px;
 `;
 const StyledContainerText = styled.div`
 	width: 450px;
@@ -33,19 +34,20 @@ const StyledText = styled.p`
 const StyledContainerCircle = styled.div`
 	background-color: white;
 	border-radius: 50%;
-	width: 150px;
-	height: 150px;
+	width: 274px;
+	height: 274px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 81px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 `;
 const StyledTextCircle = styled.p`
-	padding-top: 68px;
-	font-size: 20px;
+	font-size: 32px;
 	font-family: 'Bellefair', serif;
 	letter-spacing: 1.25px;
 	color: #0b0d17;
-	text-align: center;
 `;
 
 export {

@@ -1,5 +1,5 @@
 import { v4 } from "uuid"
-import { StyledContainerTab, StyledContainerTitle, StyledImage, StyledTab, StyledTitle } from "./tech-container.styles"
+import { StyledContainerImage, StyledContainerInfo, StyledContainerTab, StyledContainerTerm, StyledContainerTitle, StyledImage, StyledInfoTerm, StyledTab, StyledTerm, StyledTitle, StyledTitleTerm } from "./technologyContainer.styles"
 import { TECHNOLOGY } from "../../constants/technology"
 import { useState } from "react"
 
@@ -12,8 +12,11 @@ const TechnologyContainer=()=>{
                     <StyledTitle $color='#464a50' $bold={true}>03</StyledTitle>
                     <StyledTitle $color='white'  >SPACE LAUNCH 101</StyledTitle>
                 </StyledContainerTitle> 
-                <StyledImage src={TECHNOLOGY[techActive].image} alt="" />
-                <StyledContainerTab>
+            <StyledContainerInfo>
+
+                
+                <StyledContainerTerm>
+                    <StyledContainerTab>
                     {
                       TECHNOLOGY.map((technology, index)=>(
                             <StyledTab key={v4()} $active={techActive===index}  onClick={()=>setTechActive(index)}>{technology.order}</StyledTab>
@@ -21,12 +24,22 @@ const TechnologyContainer=()=>{
                         
 
                     }
-                </StyledContainerTab>
-                <div>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                </div>
+                    </StyledContainerTab>
+                
+                    <div>
+                        <StyledTerm>THE TERMINOLOGY...</StyledTerm>
+                        <StyledTitleTerm>{TECHNOLOGY[techActive].name}</StyledTitleTerm>
+                        <StyledInfoTerm>{TECHNOLOGY[techActive].info}</StyledInfoTerm>
+
+                    </div>
+                    
+                </StyledContainerTerm>
+                
+                <StyledContainerImage>
+                   <StyledImage src={TECHNOLOGY[techActive].image} alt="" /> 
+                </StyledContainerImage>
+            </StyledContainerInfo>
+               
             </div>
         </>
     )
